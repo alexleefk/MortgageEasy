@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#include <math.h>
 
 @interface FirstViewController ()
 
@@ -22,6 +23,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSDecimalNumber) calMonthlyRePayment :(NSDecimalNumber) P, 
+                    rates:(NSDecimalNumber) r,
+                    tenor:(NSDecimalNumber) t
+{
+    r=r/12;
+    t=t*12;
+    
+    return (r*P*pow((1+r),t))/(pow((1+r),t)-1)
+
 }
 
 @end
