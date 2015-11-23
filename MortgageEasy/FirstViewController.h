@@ -10,8 +10,10 @@
 
 @interface FirstViewController : UIViewController
 
-@property(strong,nonatomic) IBOutlet UITextField *flatPrice, *loanRate, *loanAmount;
+@property(strong,nonatomic) IBOutlet UITextField    *flatPrice, *loanRate, *loanAmount,
+                                                    *loanRatioTF, *loanYearTF;
 @property(strong,nonatomic) IBOutlet UISlider *loanRatio, *loanYear;
+@property(strong, nonatomic) IBOutlet UILabel *monthlyRePaymentLabel;
 
 
 @end
