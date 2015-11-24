@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "AppDelegate.h"
 #include <math.h>
 
 @interface FirstViewController ()
@@ -23,8 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [loanRatioTF setText:[NSString stringWithFormat:@"%0f", loanRatio.value]];
-    [loanYearTF setText:[NSString stringWithFormat:@"%0f", loanYear.value]];
+    [loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatio.value]];
+    [loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYear.value]];
+    [loanAmount setText:[NSString stringWithFormat:@"%d",
+                         (int)loanRatio.value * flatPrice.text.intValue /100]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,21 +60,43 @@
     NSLog(@"Value of loanYear is %f", loanYear.value);
     
     double payment = [self calMonthlyRePayment:loanAmount.text.doubleValue rates:loanRate.text.doubleValue tenor:loanYear.value];
-    NSLog(@"Value of monthly repayment is %2f", payment);
+    NSLog(@"Value of monthly repayment is %0.2f", payment);
     
-    [monthlyRePaymentLabel setText:[NSString stringWithFormat:@"%2f", payment]];
+    [monthlyRePaymentLabel setText:[NSString stringWithFormat:@"%0.2f", payment]];
+    
+    
+    AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    [ad.prePaymentDetail addObject:@"aaa"];
+    [ad.prePaymentDetail addObject:@"ccc"];
+    
+    
 }
 
 -(IBAction)updateLoadAmount:(id)sender{
-    [loanAmount setText:[NSString stringWithFormat:@"%0f", loanRatio.value * flatPrice.text.intValue /100]];
+    [loanAmount setText:[NSString stringWithFormat:@"%d",
+                         (int)loanRatio.value * flatPrice.text.intValue /100]];
+    
+    [flatPrice resignFirstResponder];
+    [loanRatio resignFirstResponder];
+}
+
+-(IBAction)updateFlatPrice:(id)sender{
+    [flatPrice setText:[NSString stringWithFormat:@"%d",
+                         loanAmount.text.intValue/(int)loanRatio.value/100]];
+    
+    [loanAmount resignFirstResponder];
 }
 
 -(IBAction)ValueChangeloanRatioSlider:(id)sender{
-    [loanRatioTF setText:[NSString stringWithFormat:@"%0f", loanRatio.value]];
+    [loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatio.value]];
 }
 
 -(IBAction)ValueChangeloanYearSlider:(id)sender{
-    [loanYearTF setText:[NSString stringWithFormat:@"%0f", loanYear.value]];
+    [loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYear.value]];
+}
+
+-(IBAction)doneEditing:(id)sender{
+    [sender resignFirstResponder];
 }
 
 

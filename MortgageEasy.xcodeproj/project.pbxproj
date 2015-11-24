@@ -16,6 +16,8 @@
 		431BA3041BFCD953008B8D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431BA3021BFCD953008B8D3E /* LaunchScreen.storyboard */; };
 		431BA30F1BFCD954008B8D3E /* MortgageEasyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA30E1BFCD954008B8D3E /* MortgageEasyTests.m */; };
 		431BA31A1BFCD954008B8D3E /* MortgageEasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA3191BFCD954008B8D3E /* MortgageEasyUITests.m */; };
+		436995AB1C04D04300FC28BD /* reference.txt in Resources */ = {isa = PBXBuildFile; fileRef = 436995AA1C04D04300FC28BD /* reference.txt */; settings = {ASSET_TAGS = (); }; };
+		436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		431BA3151BFCD954008B8D3E /* MortgageEasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortgageEasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431BA3191BFCD954008B8D3E /* MortgageEasyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MortgageEasyUITests.m; sourceTree = "<group>"; };
 		431BA31B1BFCD954008B8D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		436995AA1C04D04300FC28BD /* reference.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = reference.txt; sourceTree = "<group>"; };
+		436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDetailTableTableViewController.h; path = ../PaymentDetailTableTableViewController.h; sourceTree = "<group>"; };
+		436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDetailTableTableViewController.m; path = ../PaymentDetailTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +115,14 @@
 				431BA2F81BFCD953008B8D3E /* FirstViewController.m */,
 				431BA2FA1BFCD953008B8D3E /* SecondViewController.h */,
 				431BA2FB1BFCD953008B8D3E /* SecondViewController.m */,
+				436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */,
+				436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */,
 				431BA2FD1BFCD953008B8D3E /* Main.storyboard */,
 				431BA3001BFCD953008B8D3E /* Assets.xcassets */,
 				431BA3021BFCD953008B8D3E /* LaunchScreen.storyboard */,
 				431BA3051BFCD953008B8D3E /* Info.plist */,
 				431BA2F11BFCD953008B8D3E /* Supporting Files */,
+				436995AA1C04D04300FC28BD /* reference.txt */,
 			);
 			path = MortgageEasy;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 			files = (
 				431BA3041BFCD953008B8D3E /* LaunchScreen.storyboard in Resources */,
 				431BA3011BFCD953008B8D3E /* Assets.xcassets in Resources */,
+				436995AB1C04D04300FC28BD /* reference.txt in Resources */,
 				431BA2FF1BFCD953008B8D3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +286,7 @@
 			files = (
 				431BA2FC1BFCD953008B8D3E /* SecondViewController.m in Sources */,
 				431BA2F61BFCD953008B8D3E /* AppDelegate.m in Sources */,
+				436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */,
 				431BA2F91BFCD953008B8D3E /* FirstViewController.m in Sources */,
 				431BA2F31BFCD953008B8D3E /* main.m in Sources */,
 			);
@@ -504,6 +514,7 @@
 				431BA3201BFCD954008B8D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		431BA3211BFCD954008B8D3E /* Build configuration list for PBXNativeTarget "MortgageEasyTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +523,7 @@
 				431BA3231BFCD954008B8D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		431BA3241BFCD954008B8D3E /* Build configuration list for PBXNativeTarget "MortgageEasyUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +532,7 @@
 				431BA3261BFCD954008B8D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

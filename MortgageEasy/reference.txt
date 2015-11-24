@@ -1,0 +1,8 @@
+//number pad with done
+http://stackoverflow.com/questions/584538/how-to-show-done-button-on-iphone-number-pad
+
+//number pad with dot
+http://www.devedup.com/index.php/2010/03/13/iphone-number-pad-with-a-decimal-point/
+
+//passing data between views
+http://www.leesilver.net/blog/passing-data-between-view-controllers-in-objective-c
