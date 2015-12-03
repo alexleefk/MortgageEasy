@@ -10,4 +10,7 @@
 
 @interface PaymentDetailTableTableViewController : UITableViewController
 
+@property(nonatomic)  float   flatPrice, loanRate, loanAmount, monthlyRePayment;
+@property(nonatomic)  int loanYear;
+
 @end

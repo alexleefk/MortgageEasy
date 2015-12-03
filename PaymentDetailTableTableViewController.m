@@ -27,9 +27,7 @@
     //self.ob = prePaymentDetail;
     AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     
-    NSMutableArray *p = [[NSMutableArray alloc]initWithArray:ad.prePaymentDetail];
-    NSLog(@"XXXXXXXX", ad.prePaymentDetail[0]);
-    NSLog(@"XXXXXXXX", p[1]);
+    NSLog(@"XXXXXXXX size = %d", (int)ad.prePaymentDetail.count);
     
     
 }
@@ -50,16 +48,37 @@
 #warning Incomplete implementation, return the number of rows
     return 0;
 }
-
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     
+    label = (UILabel *)[cell viewWithTag:NAME_TAG];
+    label.text = myObject.name;
+    
     return cell;
 }
-*/
+ */
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *DetailCellIdentifier = @"DetailCell";
+    
+    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:DetailCellIdentifier];
+    
+    if (cell == nil) {
+        NSArray *cellObjects = [[NSBundle mainBundle] loadNibNamed:@"DetailCell" owner:self options:nil];
+        cell = (UITableViewCell*) [cellObjects objectAtIndex:0];
+    }
+    
+    //label = (UILabel *)[cell viewWithTag:NAME_TAG];
+    //label.text = myObject.name;
+
+}*/
+
+
 
 /*
 // Override to support conditional editing of the table view.

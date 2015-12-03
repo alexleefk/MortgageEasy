@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  PurchasingPowerCal.h
 //  MortgageEasy
 //
 //  Created by Alex Lee on 19/11/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface PurchasingPowerCal : UIViewController
 
 
 @end

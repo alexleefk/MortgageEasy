@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  PurchasingPowerCal.m
 //  MortgageEasy
 //
 //  Created by Alex Lee on 19/11/15.
 //  Copyright © 2015 Alex Lee. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "PurchasingPowerCal.h"
 
-@interface SecondViewController ()
+@interface PurchasingPowerCal ()
 
 @end
 
-@implementation SecondViewController
+@implementation PurchasingPowerCal
 
 - (void)viewDidLoad {
     [super viewDidLoad];

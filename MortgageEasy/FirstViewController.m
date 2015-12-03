@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "AppDelegate.h"
+#import "PaymentDetailTableTableViewController.h"
 #include <math.h>
 
 @interface FirstViewController ()
@@ -28,6 +29,9 @@
     [loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYear.value]];
     [loanAmount setText:[NSString stringWithFormat:@"%d",
                          (int)loanRatio.value * flatPrice.text.intValue /100]];
+    
+    [self Calculate:nil];
+    //[self prepareForSegue:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +57,11 @@
 }
 
 -(IBAction)Calculate:(id)sender{
+    
+    int i, r;
+    double interest, accurdInt, principle, tem_principle;
+    NSNumber *intDes;
+    
     NSLog(@"Value of flatPrice is %@", flatPrice.text);
     NSLog(@"Value of loanAmount is %@", loanAmount.text);
     NSLog(@"Value of loanRate is %@", loanRate.text);
@@ -66,9 +75,28 @@
     
     
     AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-    [ad.prePaymentDetail addObject:@"aaa"];
+/*    [ad.prePaymentDetail addObject:@"aaa"];
     [ad.prePaymentDetail addObject:@"ccc"];
+*/
     
+    i = 0;
+    r = 0;
+    accurdInt = 0;
+    principle = loanAmount.text.doubleValue;
+    
+    while (i<loanYear.value*12){
+        tem_principle = principle - i * payment + accurdInt;
+        interest = tem_principle * loanRate.text.doubleValue/12/100;
+        intDes = [NSNumber numberWithDouble:interest];
+        [ad.prePaymentDetail addObject:intDes];
+        //NSLog(@"interest %d = %f", i, (float)interest);
+        
+        accurdInt = accurdInt + interest;
+        
+        i++;
+    }
+    
+    NSLog(@"end of calculation");
     
 }
 
@@ -97,6 +125,15 @@
 
 -(IBAction)doneEditing:(id)sender{
     [sender resignFirstResponder];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showDetailSegue"]){
+        PaymentDetailTableTableViewController *controller = (PaymentDetailTableTableViewController *)segue.destinationViewController;
+        //controller.loanYear = (int)loanYear.value;
+        
+        
+    }
 }
 
 

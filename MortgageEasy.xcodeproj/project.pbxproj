@@ -10,7 +10,7 @@
 		431BA2F31BFCD953008B8D3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA2F21BFCD953008B8D3E /* main.m */; };
 		431BA2F61BFCD953008B8D3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA2F51BFCD953008B8D3E /* AppDelegate.m */; };
 		431BA2F91BFCD953008B8D3E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA2F81BFCD953008B8D3E /* FirstViewController.m */; };
-		431BA2FC1BFCD953008B8D3E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA2FB1BFCD953008B8D3E /* SecondViewController.m */; };
+		431BA2FC1BFCD953008B8D3E /* PurchasingPowerCal.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA2FB1BFCD953008B8D3E /* PurchasingPowerCal.m */; };
 		431BA2FF1BFCD953008B8D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431BA2FD1BFCD953008B8D3E /* Main.storyboard */; };
 		431BA3011BFCD953008B8D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431BA3001BFCD953008B8D3E /* Assets.xcassets */; };
 		431BA3041BFCD953008B8D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431BA3021BFCD953008B8D3E /* LaunchScreen.storyboard */; };
@@ -18,6 +18,7 @@
 		431BA31A1BFCD954008B8D3E /* MortgageEasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA3191BFCD954008B8D3E /* MortgageEasyUITests.m */; };
 		436995AB1C04D04300FC28BD /* reference.txt in Resources */ = {isa = PBXBuildFile; fileRef = 436995AA1C04D04300FC28BD /* reference.txt */; settings = {ASSET_TAGS = (); }; };
 		436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,8 @@
 		431BA2F51BFCD953008B8D3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		431BA2F71BFCD953008B8D3E /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		431BA2F81BFCD953008B8D3E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		431BA2FA1BFCD953008B8D3E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		431BA2FB1BFCD953008B8D3E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		431BA2FA1BFCD953008B8D3E /* PurchasingPowerCal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchasingPowerCal.h; sourceTree = "<group>"; };
+		431BA2FB1BFCD953008B8D3E /* PurchasingPowerCal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchasingPowerCal.m; sourceTree = "<group>"; };
 		431BA2FE1BFCD953008B8D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		431BA3001BFCD953008B8D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431BA3031BFCD953008B8D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +60,8 @@
 		436995AA1C04D04300FC28BD /* reference.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = reference.txt; sourceTree = "<group>"; };
 		436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDetailTableTableViewController.h; path = ../PaymentDetailTableTableViewController.h; sourceTree = "<group>"; };
 		436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDetailTableTableViewController.m; path = ../PaymentDetailTableTableViewController.m; sourceTree = "<group>"; };
+		436995B21C10AA8D00FC28BD /* PaymentDetailCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailCollection.h; sourceTree = "<group>"; };
+		436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +116,8 @@
 				431BA2F51BFCD953008B8D3E /* AppDelegate.m */,
 				431BA2F71BFCD953008B8D3E /* FirstViewController.h */,
 				431BA2F81BFCD953008B8D3E /* FirstViewController.m */,
-				431BA2FA1BFCD953008B8D3E /* SecondViewController.h */,
-				431BA2FB1BFCD953008B8D3E /* SecondViewController.m */,
+				431BA2FA1BFCD953008B8D3E /* PurchasingPowerCal.h */,
+				431BA2FB1BFCD953008B8D3E /* PurchasingPowerCal.m */,
 				436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */,
 				436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */,
 				431BA2FD1BFCD953008B8D3E /* Main.storyboard */,
@@ -123,6 +126,8 @@
 				431BA3051BFCD953008B8D3E /* Info.plist */,
 				431BA2F11BFCD953008B8D3E /* Supporting Files */,
 				436995AA1C04D04300FC28BD /* reference.txt */,
+				436995B21C10AA8D00FC28BD /* PaymentDetailCollection.h */,
+				436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */,
 			);
 			path = MortgageEasy;
 			sourceTree = "<group>";
@@ -284,7 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431BA2FC1BFCD953008B8D3E /* SecondViewController.m in Sources */,
+				431BA2FC1BFCD953008B8D3E /* PurchasingPowerCal.m in Sources */,
+				436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */,
 				431BA2F61BFCD953008B8D3E /* AppDelegate.m in Sources */,
 				436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */,
 				431BA2F91BFCD953008B8D3E /* FirstViewController.m in Sources */,
