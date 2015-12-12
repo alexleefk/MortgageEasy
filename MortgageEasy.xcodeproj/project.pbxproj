@@ -19,6 +19,7 @@
 		436995AB1C04D04300FC28BD /* reference.txt in Resources */ = {isa = PBXBuildFile; fileRef = 436995AA1C04D04300FC28BD /* reference.txt */; settings = {ASSET_TAGS = (); }; };
 		436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */; settings = {ASSET_TAGS = (); }; };
+		436995B61C10B47C00FC28BD /* KeyPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436995B51C10B47C00FC28BD /* KeyPad.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDetailTableTableViewController.m; path = ../PaymentDetailTableTableViewController.m; sourceTree = "<group>"; };
 		436995B21C10AA8D00FC28BD /* PaymentDetailCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailCollection.h; sourceTree = "<group>"; };
 		436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailCollection.m; sourceTree = "<group>"; };
+		436995B51C10B47C00FC28BD /* KeyPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				436995AA1C04D04300FC28BD /* reference.txt */,
 				436995B21C10AA8D00FC28BD /* PaymentDetailCollection.h */,
 				436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */,
+				436995B51C10B47C00FC28BD /* KeyPad.xib */,
 			);
 			path = MortgageEasy;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				431BA3011BFCD953008B8D3E /* Assets.xcassets in Resources */,
 				436995AB1C04D04300FC28BD /* reference.txt in Resources */,
 				431BA2FF1BFCD953008B8D3E /* Main.storyboard in Resources */,
+				436995B61C10B47C00FC28BD /* KeyPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

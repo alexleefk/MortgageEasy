@@ -19,19 +19,31 @@
 
 @implementation FirstViewController
 
-@synthesize flatPrice, loanAmount, loanRate, loanRatio, loanYear, loanRatioTF, loanYearTF, monthlyRePaymentLabel;
+@synthesize flatPriceTF, loanAmountTF, loanRateTF, loanRatioTF, loanYearTF,
+            flatPriceSB, loanAmountSB, loanRateSB, loanRatioSB, loanYearSB,
+            monthlyRePaymentLabel, scrollv;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatio.value]];
-    [loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYear.value]];
-    [loanAmount setText:[NSString stringWithFormat:@"%d",
-                         (int)loanRatio.value * flatPrice.text.intValue /100]];
+    //[self.loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatioTF.text.intValue]];
+    //[self.loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYearTF.text.intValue]];
+    [self.loanAmountTF setText:[NSString stringWithFormat:@"%d",
+                         (int)loanRatioTF.text.intValue * flatPriceTF.text.intValue /100]];
+    
+    self.monthlyRePaymentLabel.numberOfLines = 0;
+    //[self.monthlyRePaymentLabel sizeToFit ];
+    
+    //[loanRatioTF setKeyboardType:UIKeyboardTypeDecimalPad];
+    //[loanRateTF setKeyboardType:UIKeyboardTypeDecimalPad];
     
     [self Calculate:nil];
     //[self prepareForSegue:nil];
+    
+    self.scrollv.contentSize = CGSizeMake(self.view.frame.size.width,
+                                          self.monthlyRePaymentLabel.frame.origin.y + self.monthlyRePaymentLabel.frame.size.height +30);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,31 +74,28 @@
     double interest, accurdInt, principle, tem_principle;
     NSNumber *intDes;
     
-    NSLog(@"Value of flatPrice is %@", flatPrice.text);
-    NSLog(@"Value of loanAmount is %@", loanAmount.text);
-    NSLog(@"Value of loanRate is %@", loanRate.text);
-    NSLog(@"Value of loanRatio is %f", loanRatio.value);
-    NSLog(@"Value of loanYear is %f", loanYear.value);
+    NSLog(@"Value of flatPriceTF is %@", flatPriceTF.text);
+    NSLog(@"Value of loanAmountTF is %@", loanAmountTF.text);
+    NSLog(@"Value of loanRateTF is %@", loanRateTF.text);
+    NSLog(@"Value of loanRatio is %f", loanRatioTF.text.doubleValue);
+    NSLog(@"Value of loanYear is %d", loanYearTF.text.intValue);
     
-    double payment = [self calMonthlyRePayment:loanAmount.text.doubleValue rates:loanRate.text.doubleValue tenor:loanYear.value];
+    double payment = [self calMonthlyRePayment:loanAmountTF.text.doubleValue rates:loanRateTF.text.doubleValue tenor:loanYearTF.text.intValue];
     NSLog(@"Value of monthly repayment is %0.2f", payment);
     
     [monthlyRePaymentLabel setText:[NSString stringWithFormat:@"%0.2f", payment]];
     
     
     AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-/*    [ad.prePaymentDetail addObject:@"aaa"];
-    [ad.prePaymentDetail addObject:@"ccc"];
-*/
     
     i = 0;
     r = 0;
     accurdInt = 0;
-    principle = loanAmount.text.doubleValue;
+    principle = loanAmountTF.text.doubleValue;
     
-    while (i<loanYear.value*12){
+    while (i<loanYearTF.text.intValue*12){
         tem_principle = principle - i * payment + accurdInt;
-        interest = tem_principle * loanRate.text.doubleValue/12/100;
+        interest = tem_principle * loanRateTF.text.doubleValue/12/100;
         intDes = [NSNumber numberWithDouble:interest];
         [ad.prePaymentDetail addObject:intDes];
         //NSLog(@"interest %d = %f", i, (float)interest);
@@ -100,27 +109,79 @@
     
 }
 
--(IBAction)updateLoadAmount:(id)sender{
-    [loanAmount setText:[NSString stringWithFormat:@"%d",
-                         (int)loanRatio.value * flatPrice.text.intValue /100]];
+-(IBAction)updateLoadAmountTF:(id)sender{
+    [loanAmountTF setText:[NSString stringWithFormat:@"%d",
+                         (int)loanRatioTF.text.intValue * flatPriceTF.text.intValue /100]];
     
-    [flatPrice resignFirstResponder];
-    [loanRatio resignFirstResponder];
+    [flatPriceTF resignFirstResponder];
+    [loanRatioTF resignFirstResponder];
 }
 
--(IBAction)updateFlatPrice:(id)sender{
-    [flatPrice setText:[NSString stringWithFormat:@"%d",
-                         loanAmount.text.intValue/(int)loanRatio.value/100]];
+-(IBAction)updateflatPriceTF:(id)sender{
+    [flatPriceTF setText:[NSString stringWithFormat:@"%d",
+                         loanAmountTF.text.intValue/(int)loanRatioTF.text.intValue/100]];
     
-    [loanAmount resignFirstResponder];
+    [loanAmountTF resignFirstResponder];
 }
 
 -(IBAction)ValueChangeloanRatioSlider:(id)sender{
-    [loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatio.value]];
+    [loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatioSB.value]];
+    
+    self.loanAmountSB.value = (int) (loanRatioSB.value/100 * flatPriceSB.value);
+    [self.loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
 }
 
 -(IBAction)ValueChangeloanYearSlider:(id)sender{
-    [loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYear.value]];
+    [loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYearSB.value]];
+}
+
+-(IBAction)ValueChangeflatPriceSlider:(id)sender{
+    [flatPriceTF setText:[NSString stringWithFormat:@"%d", (int)flatPriceSB.value]];
+    
+    self.loanAmountSB.value = (int) (loanRatioSB.value/100 * flatPriceSB.value);
+    [self.loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
+}
+
+-(IBAction)ValueChangeloanRateSlider:(id)sender{
+    [loanRateTF setText:[NSString stringWithFormat:@"%f", (double)loanRateSB.value]];
+}
+
+-(IBAction)ValueChangeloanAmountSlider:(id)sender{
+    [loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
+    
+    self.flatPriceSB.value = (int) (loanAmountSB.value / (loanRatioSB.value/100) );
+    [self.flatPriceTF setText:[NSString stringWithFormat:@"%d", (int)flatPriceSB.value]];
+
+}
+
+-(IBAction)ValueChangeloanRatioTextField:(id)sender{
+    loanRatioSB.value= loanRatioTF.text.intValue;
+    
+    self.loanAmountSB.value = (int) (loanRatioSB.value/100 * flatPriceSB.value);
+    [self.loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
+}
+
+-(IBAction)ValueChangeloanYearTextField:(id)sender{
+    loanYearSB.value = loanYearTF.text.intValue;
+}
+
+-(IBAction)ValueChangeflatPriceTextField:(id)sender{
+    flatPriceSB.value = flatPriceTF.text.intValue;
+    
+    self.loanAmountSB.value = (int) (loanRatioSB.value/100 * flatPriceSB.value);
+    [self.loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
+}
+
+-(IBAction)ValueChangeloanRateTextField:(id)sender{
+    loanRateSB.value = loanRateTF.text.doubleValue;
+}
+
+-(IBAction)ValueChangeloanAmountTextField:(id)sender{
+    loanAmountSB.value = loanAmountTF.text.intValue;
+    
+    self.flatPriceSB.value = (int) (loanAmountSB.value / (loanRatioSB.value/100) );
+    [self.flatPriceTF setText:[NSString stringWithFormat:@"%d", (int)flatPriceSB.value]];
+    
 }
 
 -(IBAction)doneEditing:(id)sender{

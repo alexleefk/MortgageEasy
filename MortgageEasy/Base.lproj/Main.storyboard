@@ -1,212 +1,199 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flat Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfD-1t-dvS">
-                                <rect key="frame" x="32" y="66" width="72" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="0Ep-Aw-nYl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-63-Oly">
-                                <rect key="frame" x="19" y="104" width="101" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="q5R-YT-ak2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-7D-cQo">
-                                <rect key="frame" x="18" y="174" width="102" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="eBT-2w-ZZA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44U-2Y-Z17">
-                                <rect key="frame" x="20" y="210" width="98" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5j0-wi-HlJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te7-s7-shJ">
-                                <rect key="frame" x="51" y="255" width="34" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="o1e-Gp-e28"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-BR-EPt">
-                                <rect key="frame" x="128" y="316" width="64" height="30"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="Calculate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7MF-J7-d3L"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9eK-2K-K60">
-                                <rect key="frame" x="152" y="133" width="118" height="31"/>
-                                <connections>
-                                    <action selector="ValueChangeloanRatioSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="RUq-9Y-Cqg"/>
-                                    <action selector="updateLoadAmount:" destination="9pv-A4-QxB" eventType="valueChanged" id="Emc-N2-Cbg"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J1O-Ea-akd">
-                                <rect key="frame" x="163" y="165" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="7jy-kd-bfN"/>
-                                    <action selector="updateFlatPrice:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Lgl-KA-hiO"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.15" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-2K-mbS">
-                                <rect key="frame" x="163" y="208" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                <connections>
-                                    <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Qio-Je-XNW"/>
-                                </connections>
-                            </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="IoF-UL-EPT">
-                                <rect key="frame" x="152" y="283" width="118" height="31"/>
-                                <connections>
-                                    <action selector="ValueChangeloanYearSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="53T-Oc-RXx"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4000000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Tm-34a">
-                                <rect key="frame" x="163" y="62" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="DYV-ea-nRR"/>
-                                    <action selector="updateLoadAmount:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="ThX-bj-Csh"/>
-                                    <action selector="updateLoadAmount:" destination="9pv-A4-QxB" eventType="valueChanged" id="ivn-oI-yFc"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kx8-cV-t4t">
-                                <rect key="frame" x="163" y="100" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="0P1-DC-vny"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uTk-HQ-Bf6">
-                                <rect key="frame" x="163" y="251" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="4zT-4A-gYH"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lG-3N-zyn">
-                                <rect key="frame" x="190" y="359" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbt-pv-boK">
-                                <rect key="frame" x="269" y="212" width="13" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Monthly RePayment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXC-Oj-9bV">
-                                <rect key="frame" x="9" y="359" width="153" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Wb4-gX-fCY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="962"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="44U-2Y-Z17">
+                                        <rect key="frame" x="13" y="328" width="98" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="te7-s7-shJ">
+                                        <rect key="frame" x="13" y="252" width="34" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="100" id="9eK-2K-K60">
+                                        <rect key="frame" x="161" y="198" width="118" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="uJe-Tg-LA7"/>
+                                            <action selector="ValueChangeloanRatioSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="Mwf-I8-wE6"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3200000" minValue="500000" maxValue="10000000" id="1ya-9z-20Y" userLabel="Loan Amount SB">
+                                        <rect key="frame" x="161" y="121" width="118" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="A9y-wC-EAz"/>
+                                            <action selector="ValueChangeloanAmountSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="hNW-QP-YXa"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="J1O-Ea-akd">
+                                        <rect key="frame" x="163" y="88" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="AYo-Zr-RfC"/>
+                                            <action selector="ValueChangeloanAmountTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="BGr-NM-yja"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="7jy-kd-bfN"/>
+                                            <action selector="updateFlatPrice:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Lgl-KA-hiO"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.95" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="CUv-2K-mbS">
+                                        <rect key="frame" x="163" y="319" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="aLE-Vh-W6X"/>
+                                            <action selector="ValueChangeloanRateTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="k8H-Ej-14L"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Qio-Je-XNW"/>
+                                        </connections>
+                                    </textField>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="30" id="IoF-UL-EPT">
+                                        <rect key="frame" x="161" y="281" width="118" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="2VF-hH-z2z"/>
+                                            <action selector="ValueChangeloanYearSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="53T-Oc-RXx"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.95" minValue="1" maxValue="8" id="0kI-jo-1xd">
+                                        <rect key="frame" x="161" y="357" width="118" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="QX8-YR-45Q"/>
+                                            <action selector="ValueChangeloanRateSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="Hmm-lk-tVg"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="80" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="kx8-cV-t4t">
+                                        <rect key="frame" x="163" y="159" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="p5T-x3-EPN"/>
+                                            <action selector="ValueChangeloanRatioTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="gvZ-hD-JKq"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="0P1-DC-vny"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="uTk-HQ-Bf6">
+                                        <rect key="frame" x="163" y="243" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="pMS-2H-Yx3"/>
+                                            <action selector="ValueChangeloanYearTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="prt-MF-OwL"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="4zT-4A-gYH"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly RePayment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OXC-Oj-9bV">
+                                        <rect key="frame" x="13" y="395" width="153" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgI-63-Oly">
+                                        <rect key="frame" x="8" y="168" width="101" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bdg-7D-cQo">
+                                        <rect key="frame" x="8" y="97" width="102" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4000000" minValue="1000000" maxValue="10000000" id="Qzz-qp-VfT">
+                                        <rect key="frame" x="161" y="53" width="118" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="fik-wO-4XM"/>
+                                            <action selector="ValueChangeflatPriceSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="tgl-3v-uNp"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xbt-pv-boK">
+                                        <rect key="frame" x="271" y="163" width="13" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5lG-3N-zyn">
+                                        <rect key="frame" x="202" y="395" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flat Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RfD-1t-dvS">
+                                        <rect key="frame" x="8" y="24" width="72" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4000000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="KVC-Tm-34a">
+                                        <rect key="frame" x="163" y="20" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="MjL-0L-xym"/>
+                                            <action selector="ValueChangeflatPriceTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="V23-wY-zOs"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="DYV-ea-nRR"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9eK-2K-K60" firstAttribute="trailing" secondItem="IoF-UL-EPT" secondAttribute="trailing" id="089-Df-T8N"/>
-                            <constraint firstItem="xgI-63-Oly" firstAttribute="top" secondItem="RfD-1t-dvS" secondAttribute="bottom" constant="17" id="0zn-E6-jJO"/>
-                            <constraint firstItem="5lG-3N-zyn" firstAttribute="leading" secondItem="OXC-Oj-9bV" secondAttribute="trailing" constant="28" id="1vW-ni-nOR"/>
-                            <constraint firstItem="xgI-63-Oly" firstAttribute="trailing" secondItem="Bdg-7D-cQo" secondAttribute="trailing" id="4mP-jp-eoV"/>
-                            <constraint firstItem="IoF-UL-EPT" firstAttribute="top" secondItem="uTk-HQ-Bf6" secondAttribute="bottom" constant="2" id="8xm-FK-4Qy"/>
-                            <constraint firstItem="kx8-cV-t4t" firstAttribute="leading" secondItem="xgI-63-Oly" secondAttribute="trailing" constant="43" id="CaH-38-HRR"/>
-                            <constraint firstItem="kx8-cV-t4t" firstAttribute="leading" secondItem="J1O-Ea-akd" secondAttribute="leading" id="FhH-ni-sZl"/>
-                            <constraint firstItem="te7-s7-shJ" firstAttribute="top" secondItem="44U-2Y-Z17" secondAttribute="bottom" constant="24" id="HXM-dB-mme"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="OXC-Oj-9bV" secondAttribute="bottom" constant="51" id="KPr-5b-XH6"/>
-                            <constraint firstItem="J1O-Ea-akd" firstAttribute="bottom" secondItem="Bdg-7D-cQo" secondAttribute="bottom" id="L1Y-mf-hM6"/>
-                            <constraint firstItem="OXC-Oj-9bV" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-7" id="LHc-vg-SXu"/>
-                            <constraint firstItem="IoF-UL-EPT" firstAttribute="centerX" secondItem="5lG-3N-zyn" secondAttribute="centerX" id="LYk-Z5-blT"/>
-                            <constraint firstItem="kx8-cV-t4t" firstAttribute="trailing" secondItem="J1O-Ea-akd" secondAttribute="trailing" id="Njl-1p-RBD"/>
-                            <constraint firstItem="fPP-BR-EPt" firstAttribute="top" secondItem="IoF-UL-EPT" secondAttribute="bottom" constant="3" id="QnV-ey-hgL"/>
-                            <constraint firstItem="OXC-Oj-9bV" firstAttribute="top" secondItem="te7-s7-shJ" secondAttribute="bottom" constant="83" id="Rfr-Wq-wtM"/>
-                            <constraint firstItem="uTk-HQ-Bf6" firstAttribute="leading" secondItem="te7-s7-shJ" secondAttribute="trailing" constant="78" id="Rg4-We-Tv1"/>
-                            <constraint firstItem="CUv-2K-mbS" firstAttribute="trailing" secondItem="uTk-HQ-Bf6" secondAttribute="trailing" id="SHF-7D-VMj"/>
-                            <constraint firstItem="kx8-cV-t4t" firstAttribute="top" secondItem="KVC-Tm-34a" secondAttribute="bottom" constant="8" symbolic="YES" id="UeL-0z-qfD"/>
-                            <constraint firstItem="Bdg-7D-cQo" firstAttribute="top" secondItem="xgI-63-Oly" secondAttribute="bottom" constant="49" id="XR3-uT-tyM"/>
-                            <constraint firstItem="9eK-2K-K60" firstAttribute="centerX" secondItem="J1O-Ea-akd" secondAttribute="centerX" id="XWj-7c-4qc"/>
-                            <constraint firstItem="OXC-Oj-9bV" firstAttribute="baseline" secondItem="5lG-3N-zyn" secondAttribute="baseline" id="Zpf-Y7-3m1"/>
-                            <constraint firstItem="44U-2Y-Z17" firstAttribute="centerX" secondItem="Bdg-7D-cQo" secondAttribute="centerX" id="bUT-fh-jg7"/>
-                            <constraint firstItem="J1O-Ea-akd" firstAttribute="top" secondItem="9eK-2K-K60" secondAttribute="bottom" constant="2" id="d19-GE-yDC"/>
-                            <constraint firstItem="uTk-HQ-Bf6" firstAttribute="leading" secondItem="CUv-2K-mbS" secondAttribute="leading" id="dKz-Vh-WDQ"/>
-                            <constraint firstItem="RfD-1t-dvS" firstAttribute="centerX" secondItem="te7-s7-shJ" secondAttribute="centerX" id="een-dn-p58"/>
-                            <constraint firstItem="Bdg-7D-cQo" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="2" id="hN4-QQ-hnc"/>
-                            <constraint firstItem="KVC-Tm-34a" firstAttribute="leading" secondItem="RfD-1t-dvS" secondAttribute="trailing" constant="59" id="hTI-1Y-Zpt"/>
-                            <constraint firstItem="fPP-BR-EPt" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="hrM-9t-sQg"/>
-                            <constraint firstItem="KVC-Tm-34a" firstAttribute="trailing" secondItem="kx8-cV-t4t" secondAttribute="trailing" id="hyo-6Q-fg9"/>
-                            <constraint firstItem="xgI-63-Oly" firstAttribute="centerX" secondItem="Bdg-7D-cQo" secondAttribute="centerX" id="k6X-tJ-B5z"/>
-                            <constraint firstItem="KVC-Tm-34a" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="42" id="lUJ-3d-G3V"/>
-                            <constraint firstItem="xgI-63-Oly" firstAttribute="centerY" secondItem="kx8-cV-t4t" secondAttribute="centerY" id="onm-iv-enE"/>
-                            <constraint firstItem="CUv-2K-mbS" firstAttribute="leading" secondItem="44U-2Y-Z17" secondAttribute="trailing" constant="45" id="pal-3U-sV6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9eK-2K-K60" secondAttribute="trailing" constant="36" id="phO-TO-ugM"/>
-                            <constraint firstItem="44U-2Y-Z17" firstAttribute="top" secondItem="Bdg-7D-cQo" secondAttribute="bottom" constant="15" id="qph-M2-YGy"/>
-                            <constraint firstItem="J1O-Ea-akd" firstAttribute="trailing" secondItem="CUv-2K-mbS" secondAttribute="trailing" id="r1G-pK-RXX"/>
-                            <constraint firstItem="te7-s7-shJ" firstAttribute="centerY" secondItem="uTk-HQ-Bf6" secondAttribute="centerY" id="rag-ak-99S"/>
-                            <constraint firstItem="5lG-3N-zyn" firstAttribute="firstBaseline" secondItem="OXC-Oj-9bV" secondAttribute="firstBaseline" id="ul5-rX-T06"/>
-                            <constraint firstItem="CUv-2K-mbS" firstAttribute="top" secondItem="J1O-Ea-akd" secondAttribute="bottom" constant="13" id="v9c-Se-5TS"/>
-                            <constraint firstItem="CUv-2K-mbS" firstAttribute="leading" secondItem="J1O-Ea-akd" secondAttribute="leading" id="vKX-XB-2nM"/>
-                            <constraint firstItem="IoF-UL-EPT" firstAttribute="leading" secondItem="9eK-2K-K60" secondAttribute="leading" id="y0B-4w-2yR"/>
-                            <constraint firstItem="RfD-1t-dvS" firstAttribute="centerY" secondItem="KVC-Tm-34a" secondAttribute="centerY" id="zc6-mK-u9C"/>
-                            <constraint firstItem="KVC-Tm-34a" firstAttribute="leading" secondItem="kx8-cV-t4t" secondAttribute="leading" id="ziT-cd-4hS"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
-                        <outlet property="flatPrice" destination="KVC-Tm-34a" id="Aj2-7g-XoB"/>
-                        <outlet property="loanAmount" destination="J1O-Ea-akd" id="vZ9-3X-I6C"/>
-                        <outlet property="loanRate" destination="CUv-2K-mbS" id="YYt-S6-XEX"/>
-                        <outlet property="loanRatio" destination="9eK-2K-K60" id="t1V-tD-CvK"/>
-                        <outlet property="loanRatioTF" destination="kx8-cV-t4t" id="CsD-R1-Svn"/>
-                        <outlet property="loanYear" destination="IoF-UL-EPT" id="Qxu-4n-phw"/>
-                        <outlet property="loanYearTF" destination="uTk-HQ-Bf6" id="9wJ-UV-2Xi"/>
-                        <outlet property="monthlyRePaymentLabel" destination="5lG-3N-zyn" id="1W2-cD-HdJ"/>
+                        <outlet property="flatPriceSB" destination="Qzz-qp-VfT" id="xTK-rn-mfD"/>
+                        <outlet property="flatPriceTF" destination="KVC-Tm-34a" id="yCq-Vz-jIG"/>
+                        <outlet property="loanAmountSB" destination="1ya-9z-20Y" id="XU3-T3-Mfm"/>
+                        <outlet property="loanAmountTF" destination="J1O-Ea-akd" id="gWe-ZE-ewN"/>
+                        <outlet property="loanRateSB" destination="0kI-jo-1xd" id="u0E-Yn-Zo5"/>
+                        <outlet property="loanRateTF" destination="CUv-2K-mbS" id="9nw-6z-rEt"/>
+                        <outlet property="loanRatioSB" destination="9eK-2K-K60" id="P8y-sA-BJr"/>
+                        <outlet property="loanRatioTF" destination="kx8-cV-t4t" id="YHT-cj-8n6"/>
+                        <outlet property="loanYearSB" destination="IoF-UL-EPT" id="wqQ-fW-zEn"/>
+                        <outlet property="loanYearTF" destination="uTk-HQ-Bf6" id="SI9-d2-VDO"/>
+                        <outlet property="monthlyRePaymentLabel" destination="5lG-3N-zyn" id="fS4-xm-btj"/>
+                        <outlet property="scrollv" destination="Wb4-gX-fCY" id="INz-MU-3uW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="-342"/>
+            <point key="canvasLocation" x="367" y="-645"/>
         </scene>
         <!--Item-->
         <scene sceneID="ILN-xI-dgq">
@@ -237,7 +224,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRI-dh-No5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="-153"/>
+            <point key="canvasLocation" x="653" y="71"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="8g7-Uz-EZp">
@@ -273,103 +260,117 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA1-Ki-tGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="431"/>
+            <point key="canvasLocation" x="969" y="568"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="PurchasingPowerCal" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="680"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4K-y1-xVr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x4K-y1-xVr">
                                 <rect key="frame" x="28" y="28" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-Yn-OwH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="a5S-Yn-OwH">
                                 <rect key="frame" x="151" y="19" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sq5-em-ww3">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Sq5-em-ww3">
                                 <rect key="frame" x="140" y="57" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFi-uX-mdr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oFi-uX-mdr">
                                 <rect key="frame" x="28" y="104" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHp-tL-bt3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="VHp-tL-bt3">
                                 <rect key="frame" x="151" y="95" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9JQ-n6-9g0">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="9JQ-n6-9g0">
                                 <rect key="frame" x="140" y="134" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwZ-4W-oc5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CwZ-4W-oc5">
                                 <rect key="frame" x="28" y="186" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edT-IN-vWI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="edT-IN-vWI">
                                 <rect key="frame" x="151" y="177" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PEV-HZ-Mxl">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="PEV-HZ-Mxl">
                                 <rect key="frame" x="140" y="216" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kU-Ng-3hu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7kU-Ng-3hu">
                                 <rect key="frame" x="28" y="274" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-Zw-2PR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="k8a-Zw-2PR">
                                 <rect key="frame" x="151" y="265" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-Lh-yuO">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="VFG-Lh-yuO">
                                 <rect key="frame" x="140" y="304" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45w-5c-aYe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="45w-5c-aYe">
                                 <rect key="frame" x="28" y="351" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emv-PF-OCi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="emv-PF-OCi">
                                 <rect key="frame" x="151" y="342" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oht-NL-Agx">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="oht-NL-Agx">
                                 <rect key="frame" x="140" y="381" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9j-mb-fuW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J9j-mb-fuW">
                                 <rect key="frame" x="28" y="428" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-0T-5UL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="vqc-0T-5UL">
                                 <rect key="frame" x="151" y="419" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vfj-EP-dhh">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="vfj-EP-dhh">
                                 <rect key="frame" x="140" y="458" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -380,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="622"/>
+            <point key="canvasLocation" x="437" y="968"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -402,7 +403,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="-10"/>
+            <point key="canvasLocation" x="36.266666666666666" y="-9.4666666666666668"/>
         </scene>
     </scenes>
     <resources>
