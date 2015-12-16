@@ -55,10 +55,6 @@
                     rates:(double) r
                     tenor:(int) t
 {
-    /*
-    r= [r decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithString:@"12"]];
-    t= [t decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"12"]];
-    */
     
     r=r/12/100;
     t=t*12;
@@ -105,6 +101,7 @@
         i++;
     }
     
+    NSLog(@"First page size = %d", (int)ad.prePaymentDetail.count);
     NSLog(@"end of calculation");
     
 }
