@@ -28,7 +28,7 @@
     AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     
     NSLog(@"XXXXXXXX size = %d", (int)ad.prePaymentDetail.count);
-    
+    interestDetail = ad.prePaymentDetail
     
 }
 
@@ -46,9 +46,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    int rCount;
+    //return number of prepayment + summary per year + title bar
+    rCount = interestDetail.count +interestDetail.count/12 +1
+    return rCount;
 }
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
@@ -57,9 +60,18 @@
     label = (UILabel *)[cell viewWithTag:NAME_TAG];
     label.text = myObject.name;
     
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+
+    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
 }
- */
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

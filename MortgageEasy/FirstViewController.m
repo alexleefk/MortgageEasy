@@ -73,7 +73,7 @@
     NSLog(@"Value of flatPriceTF is %@", flatPriceTF.text);
     NSLog(@"Value of loanAmountTF is %@", loanAmountTF.text);
     NSLog(@"Value of loanRateTF is %@", loanRateTF.text);
-    NSLog(@"Value of loanRatio is %f", loanRatioTF.text.doubleValue);
+    NSLog(@"Value of loanRatio is %0.2f", loanRatioTF.text.doubleValue);
     NSLog(@"Value of loanYear is %d", loanYearTF.text.intValue);
     
     double payment = [self calMonthlyRePayment:loanAmountTF.text.doubleValue rates:loanRateTF.text.doubleValue tenor:loanYearTF.text.intValue];
@@ -83,6 +83,8 @@
     
     
     AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    [ad.prePaymentDetail removeAllObjects];
     
     i = 0;
     r = 0;
@@ -140,7 +142,7 @@
 }
 
 -(IBAction)ValueChangeloanRateSlider:(id)sender{
-    [loanRateTF setText:[NSString stringWithFormat:@"%f", (double)loanRateSB.value]];
+    [loanRateTF setText:[NSString stringWithFormat:@"%0.2f", (double)loanRateSB.value]];
 }
 
 -(IBAction)ValueChangeloanAmountSlider:(id)sender{

@@ -12,5 +12,6 @@
 
 @property(nonatomic)  float   flatPrice, loanRate, loanAmount, monthlyRePayment;
 @property(nonatomic)  int loanYear;
+@property(weak, nonatomic) NSMutableArray *interestDetail;
 
 @end
