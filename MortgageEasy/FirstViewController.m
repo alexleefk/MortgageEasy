@@ -156,10 +156,14 @@
     
     self.loanAmountSB.value = (int) (loanRatioSB.value/100 * flatPriceSB.value);
     [self.loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
+    
+    [self Calculate:nil];
 }
 
 -(IBAction)ValueChangeloanYearTextField:(id)sender{
     loanYearSB.value = loanYearTF.text.intValue;
+    
+    [self Calculate:nil];
 }
 
 -(IBAction)ValueChangeflatPriceTextField:(id)sender{
@@ -167,10 +171,14 @@
     
     self.loanAmountSB.value = (int) (loanRatioSB.value/100 * flatPriceSB.value);
     [self.loanAmountTF setText:[NSString stringWithFormat:@"%d", (int)loanAmountSB.value]];
+    
+    [self Calculate:nil];
 }
 
 -(IBAction)ValueChangeloanRateTextField:(id)sender{
     loanRateSB.value = loanRateTF.text.doubleValue;
+    
+    [self Calculate:nil];
 }
 
 -(IBAction)ValueChangeloanAmountTextField:(id)sender{
@@ -178,6 +186,8 @@
     
     self.flatPriceSB.value = (int) (loanAmountSB.value / (loanRatioSB.value/100) );
     [self.flatPriceTF setText:[NSString stringWithFormat:@"%d", (int)flatPriceSB.value]];
+    
+    [self Calculate:nil];
     
 }
 

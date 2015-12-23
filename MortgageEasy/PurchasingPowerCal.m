@@ -76,13 +76,17 @@
         r2iRatioP = 0.5;
     }
     
-    maxLoanN = [self calLoanAmount:(salary-monthlyRepayment-otherMortgage)*r2iRatioN rates:rate tenor:year];
-    maxLoanP = [self calLoanAmount:(salary-monthlyRepayment-otherMortgage)*r2iRatioP rates:rate+3 tenor:year];
+    maxLoanN = [self calLoanAmount:(salary*r2iRatioN-monthlyRepayment-otherMortgage) rates:rate tenor:year];
+    maxLoanP = [self calLoanAmount:(salary*r2iRatioP-monthlyRepayment-otherMortgage) rates:rate+3 tenor:year];
     
     NSLog(@"maxLoanN = %0.2f", maxLoanN);
     NSLog(@"maxLoanP = %0.2f", maxLoanP);
     
-    [maxLoanLabel setText:[NSString stringWithFormat:@"%0.2f", MIN(maxLoanN, maxLoanP)]];
+    if (maxLoanN*maxLoanP >0.0){
+        [maxLoanLabel setText:[NSString stringWithFormat:@"%0.2f", MIN(maxLoanN, maxLoanP)]];
+    }else{
+        [maxLoanLabel setText:[NSString stringWithFormat:@"Not able to loan as monthly income is negative"]];
+    }
     
     
 }

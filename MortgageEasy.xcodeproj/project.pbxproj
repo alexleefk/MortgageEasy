@@ -16,6 +16,9 @@
 		431BA3041BFCD953008B8D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431BA3021BFCD953008B8D3E /* LaunchScreen.storyboard */; };
 		431BA30F1BFCD954008B8D3E /* MortgageEasyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA30E1BFCD954008B8D3E /* MortgageEasyTests.m */; };
 		431BA31A1BFCD954008B8D3E /* MortgageEasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BA3191BFCD954008B8D3E /* MortgageEasyUITests.m */; };
+		43485B871C26F2F4006F3069 /* RentalReturnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43485B861C26F2F4006F3069 /* RentalReturnViewController.m */; settings = {ASSET_TAGS = (); }; };
+		43485B901C29741D006F3069 /* PaymentDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43485B8E1C29741D006F3069 /* PaymentDetailCell.m */; settings = {ASSET_TAGS = (); }; };
+		43485B911C29741D006F3069 /* PaymentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43485B8F1C29741D006F3069 /* PaymentDetailCell.xib */; settings = {ASSET_TAGS = (); }; };
 		436995AB1C04D04300FC28BD /* reference.txt in Resources */ = {isa = PBXBuildFile; fileRef = 436995AA1C04D04300FC28BD /* reference.txt */; settings = {ASSET_TAGS = (); }; };
 		436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */; settings = {ASSET_TAGS = (); }; };
@@ -58,6 +61,11 @@
 		431BA3151BFCD954008B8D3E /* MortgageEasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortgageEasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431BA3191BFCD954008B8D3E /* MortgageEasyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MortgageEasyUITests.m; sourceTree = "<group>"; };
 		431BA31B1BFCD954008B8D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43485B851C26F2F4006F3069 /* RentalReturnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalReturnViewController.h; sourceTree = "<group>"; };
+		43485B861C26F2F4006F3069 /* RentalReturnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalReturnViewController.m; sourceTree = "<group>"; };
+		43485B8D1C29741D006F3069 /* PaymentDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailCell.h; sourceTree = "<group>"; };
+		43485B8E1C29741D006F3069 /* PaymentDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailCell.m; sourceTree = "<group>"; };
+		43485B8F1C29741D006F3069 /* PaymentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailCell.xib; sourceTree = "<group>"; };
 		436995AA1C04D04300FC28BD /* reference.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = reference.txt; sourceTree = "<group>"; };
 		436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDetailTableTableViewController.h; path = ../PaymentDetailTableTableViewController.h; sourceTree = "<group>"; };
 		436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDetailTableTableViewController.m; path = ../PaymentDetailTableTableViewController.m; sourceTree = "<group>"; };
@@ -122,15 +130,20 @@
 				431BA2FB1BFCD953008B8D3E /* PurchasingPowerCal.m */,
 				436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */,
 				436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */,
+				436995B21C10AA8D00FC28BD /* PaymentDetailCollection.h */,
+				436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */,
+				43485B851C26F2F4006F3069 /* RentalReturnViewController.h */,
+				43485B861C26F2F4006F3069 /* RentalReturnViewController.m */,
 				431BA2FD1BFCD953008B8D3E /* Main.storyboard */,
 				431BA3001BFCD953008B8D3E /* Assets.xcassets */,
 				431BA3021BFCD953008B8D3E /* LaunchScreen.storyboard */,
 				431BA3051BFCD953008B8D3E /* Info.plist */,
 				431BA2F11BFCD953008B8D3E /* Supporting Files */,
 				436995AA1C04D04300FC28BD /* reference.txt */,
-				436995B21C10AA8D00FC28BD /* PaymentDetailCollection.h */,
-				436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */,
 				436995B51C10B47C00FC28BD /* KeyPad.xib */,
+				43485B8D1C29741D006F3069 /* PaymentDetailCell.h */,
+				43485B8E1C29741D006F3069 /* PaymentDetailCell.m */,
+				43485B8F1C29741D006F3069 /* PaymentDetailCell.xib */,
 			);
 			path = MortgageEasy;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 				431BA3041BFCD953008B8D3E /* LaunchScreen.storyboard in Resources */,
 				431BA3011BFCD953008B8D3E /* Assets.xcassets in Resources */,
 				436995AB1C04D04300FC28BD /* reference.txt in Resources */,
+				43485B911C29741D006F3069 /* PaymentDetailCell.xib in Resources */,
 				431BA2FF1BFCD953008B8D3E /* Main.storyboard in Resources */,
 				436995B61C10B47C00FC28BD /* KeyPad.xib in Resources */,
 			);
@@ -296,9 +310,11 @@
 				431BA2FC1BFCD953008B8D3E /* PurchasingPowerCal.m in Sources */,
 				436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */,
 				431BA2F61BFCD953008B8D3E /* AppDelegate.m in Sources */,
+				43485B871C26F2F4006F3069 /* RentalReturnViewController.m in Sources */,
 				436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */,
 				431BA2F91BFCD953008B8D3E /* FirstViewController.m in Sources */,
 				431BA2F31BFCD953008B8D3E /* main.m in Sources */,
+				43485B901C29741D006F3069 /* PaymentDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

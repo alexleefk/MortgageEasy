@@ -52,10 +52,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="6Sc-MU-wOJ"/>
                                             <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="AYo-Zr-RfC"/>
                                             <action selector="ValueChangeloanAmountTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="BGr-NM-yja"/>
+                                            <action selector="ValueChangeloanAmountTextField:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="aAF-da-Lyi"/>
                                             <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="7jy-kd-bfN"/>
-                                            <action selector="updateFlatPrice:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Lgl-KA-hiO"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.95" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="CUv-2K-mbS">
@@ -64,7 +65,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <connections>
-                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="aLE-Vh-W6X"/>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="1De-al-e0N"/>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="D0d-wS-QvE"/>
+                                            <action selector="ValueChangeloanRateTextField:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="Pvr-nv-tXT"/>
                                             <action selector="ValueChangeloanRateTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="k8H-Ej-14L"/>
                                             <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Qio-Je-XNW"/>
                                         </connections>
@@ -91,7 +94,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="O9y-6a-xFV"/>
                                             <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="p5T-x3-EPN"/>
+                                            <action selector="ValueChangeloanRatioTextField:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="6nR-oy-iKt"/>
                                             <action selector="ValueChangeloanRatioTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="gvZ-hD-JKq"/>
                                             <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="0P1-DC-vny"/>
                                         </connections>
@@ -102,7 +107,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="Tc0-1U-rVW"/>
                                             <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="pMS-2H-Yx3"/>
+                                            <action selector="ValueChangeloanYearTextField:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="acC-q2-SlY"/>
                                             <action selector="ValueChangeloanYearTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="prt-MF-OwL"/>
                                             <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="4zT-4A-gYH"/>
                                         </connections>
@@ -163,7 +170,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="8KT-TK-UQZ"/>
                                             <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="MjL-0L-xym"/>
+                                            <action selector="ValueChangeflatPriceTextField:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="5q4-lb-nnJ"/>
                                             <action selector="ValueChangeflatPriceTextField:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="V23-wY-zOs"/>
                                             <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="DYV-ea-nRR"/>
                                         </connections>
@@ -193,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="-645"/>
+            <point key="canvasLocation" x="23" y="-1109"/>
         </scene>
         <!--Item-->
         <scene sceneID="ILN-xI-dgq">
@@ -203,16 +212,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rid-Qp-s2e">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rid-Qp-s2e" id="XUC-IY-sM9">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="dAg-XA-hhV" id="Q9p-Nx-QrI"/>
                             <outlet property="delegate" destination="dAg-XA-hhV" id="xNp-ca-b2x"/>
@@ -224,7 +223,230 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRI-dh-No5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="71"/>
+            <point key="canvasLocation" x="23" y="-349"/>
+        </scene>
+        <!--RentalReturn-->
+        <scene sceneID="FSC-Vc-kyw">
+            <objects>
+                <viewController id="A4V-OJ-MCy" userLabel="RentalReturn" customClass="RentalReturnViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ip-4T-6lE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" id="AqE-u3-dW9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Rental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76c-W2-N8m">
+                                        <rect key="frame" x="8" y="54" width="115" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="m5h-Tl-YHh">
+                                        <rect key="frame" x="215" y="45" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="BT3-li-i5z"/>
+                                            <action selector="calRentalReturn:" destination="A4V-OJ-MCy" eventType="editingDidEnd" id="1sv-oz-FFd"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="500" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="pyo-LO-Ahm">
+                                        <rect key="frame" x="215" y="134" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="m7s-bg-Oh3"/>
+                                            <action selector="calRentalReturn:" destination="A4V-OJ-MCy" eventType="editingDidEnd" id="Fud-kl-chz"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthy Mortgage Repayment" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uve-Ko-bhA">
+                                        <rect key="frame" x="8" y="163" width="172" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="kI3-YB-Kzh">
+                                        <rect key="frame" x="215" y="178" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="b6X-oC-f5n"/>
+                                            <action selector="calRentalReturn:" destination="A4V-OJ-MCy" eventType="editingDidEnd" id="WBC-xg-RWp"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flat Price" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KmB-9c-gWQ">
+                                        <rect key="frame" x="8" y="220" width="172" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5000000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Xrv-aB-eG6">
+                                        <rect key="frame" x="215" y="219" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="jqh-BX-Cs7"/>
+                                            <action selector="calRentalReturn:" destination="A4V-OJ-MCy" eventType="editingDidEnd" id="ZSr-ql-RQx"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial Investment" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4q0-zf-v8Q">
+                                        <rect key="frame" x="8" y="257" width="172" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="600000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ES9-zI-JHD">
+                                        <rect key="frame" x="215" y="257" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="EhK-kr-bVW"/>
+                                            <action selector="calRentalReturn:" destination="A4V-OJ-MCy" eventType="editingDidEnd" id="PXL-bN-jLo"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Management Fee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ybr-AS-bxI">
+                                        <rect key="frame" x="8" y="79" width="172" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="800" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="SEo-kn-e8b">
+                                        <rect key="frame" x="215" y="90" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="BEk-Bi-YLw"/>
+                                            <action selector="calRentalReturn:" destination="A4V-OJ-MCy" eventType="editingDidEnd" id="3AK-j8-WhO"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Monthly Expense" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7va-sk-NbX">
+                                        <rect key="frame" x="8" y="119" width="180" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Bq-SD-qdT">
+                                        <rect key="frame" x="8" y="288" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qcq-mu-CAT">
+                                        <rect key="frame" x="200" y="288" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FI3-9h-CjK">
+                                        <rect key="frame" x="299" y="288" width="13" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lft-zh-bkI">
+                                        <rect key="frame" x="299" y="323" width="13" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ty-aW-V2Z">
+                                        <rect key="frame" x="299" y="359" width="13" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lC5-Fj-DgR">
+                                        <rect key="frame" x="200" y="323" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tRq-AI-Xev">
+                                        <rect key="frame" x="200" y="359" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Return (after tax)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sU6-Jc-RZI">
+                                        <rect key="frame" x="8" y="323" width="174" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dk1-FQ-Jc5">
+                                        <rect key="frame" x="8" y="359" width="88" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Return (after tax)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iuo-b8-4Ca">
+                                        <rect key="frame" x="8" y="393" width="168" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N0d-Cu-q7g">
+                                        <rect key="frame" x="200" y="393" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9mL-BN-sEL">
+                                        <rect key="frame" x="298" y="388" width="18" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Re6-De-54b"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="bookReturnAfterTaxLabel" destination="lC5-Fj-DgR" id="ogl-cV-CPR"/>
+                        <outlet property="bookReturnLabel" destination="qcq-mu-CAT" id="Kju-h7-BIZ"/>
+                        <outlet property="flatPriceTF" destination="Xrv-aB-eG6" id="qG8-Uq-Dhq"/>
+                        <outlet property="investmentTF" destination="ES9-zI-JHD" id="9w1-EX-nU1"/>
+                        <outlet property="mgmtFeeTF" destination="SEo-kn-e8b" id="eZX-cF-Ad0"/>
+                        <outlet property="mortgageRepaymentTF" destination="kI3-YB-Kzh" id="tMD-dl-mdy"/>
+                        <outlet property="otherFeeTF" destination="pyo-LO-Ahm" id="aBB-pJ-yHx"/>
+                        <outlet property="realReturnAfterTaxLabel" destination="N0d-Cu-q7g" id="rEZ-T2-5TB"/>
+                        <outlet property="realReturnLabel" destination="tRq-AI-Xev" id="2AY-CS-kAh"/>
+                        <outlet property="rentalTF" destination="m5h-Tl-YHh" id="ZSf-T9-6yy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hl-Kk-uan" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="-382"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="8g7-Uz-EZp">
@@ -260,7 +482,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA1-Ki-tGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="852"/>
+            <point key="canvasLocation" x="23" y="372"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -287,6 +509,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="h42-NI-OTD"/>
                                             <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="kv0-av-l2Z"/>
                                         </connections>
                                     </textField>
@@ -304,6 +527,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="K5u-x5-Mks"/>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="dpt-a2-rUz"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Mortgage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CwZ-4W-oc5">
@@ -319,6 +543,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="0uc-r2-Flc"/>
                                             <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="Cc9-lg-urR"/>
                                         </connections>
                                     </textField>
@@ -336,6 +561,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="JIj-oh-P4P"/>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="qPx-6P-PWv"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.15" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Xbd-nV-CWV">
@@ -344,6 +570,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="NqY-MC-rHs"/>
                                             <action selector="calMaxLoanAmount:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="vNk-rj-bJz"/>
                                         </connections>
                                     </textField>
@@ -402,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432" y="931"/>
+            <point key="canvasLocation" x="686" y="-1089"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -420,11 +647,12 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="dAg-XA-hhV" kind="relationship" relationship="viewControllers" id="tK2-R2-o94"/>
+                        <segue destination="A4V-OJ-MCy" kind="relationship" relationship="viewControllers" id="Xnc-RM-NHC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36.266666666666666" y="-9.4666666666666668"/>
+            <point key="canvasLocation" x="-534" y="-500"/>
         </scene>
     </scenes>
     <resources>
