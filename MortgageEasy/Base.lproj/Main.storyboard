@@ -213,13 +213,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="dataSource" destination="dAg-XA-hhV" id="Q9p-Nx-QrI"/>
+                            <outlet property="dataSource" destination="dAg-XA-hhV" id="lNd-TK-UNQ"/>
                             <outlet property="delegate" destination="dAg-XA-hhV" id="xNp-ca-b2x"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="hhk-Z3-oWe"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Q7t-wL-YeI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRI-dh-No5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,8 @@
 //
 
 #import "PaymentDetailTableTableViewController.h"
+#import "PaymentDetailCell.h"
+#import "MortgagePayment.h"
 #import "AppDelegate.h"
 
 @interface PaymentDetailTableTableViewController ()
@@ -24,11 +26,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //self.ob = prePaymentDetail;
-    AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView sizeToFit];
     
-    NSLog(@"XXXXXXXX size = %d", (int)ad.prePaymentDetail.count);
-    interestDetail = ad.prePaymentDetail
+    AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    self.interestDetail = ad.prePaymentDetail;
+    NSLog(@"prePaymentDetail size = %d", (int)ad.prePaymentDetail.count);
+    NSLog(@"interestDetail size = %d", (int)ad.prePaymentDetail.count);
     
 }
 
@@ -40,65 +45,57 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    int rCount;
+//#warning Incomplete implementation, return the number of rows
+    //NSInteger rCount;
     //return number of prepayment + summary per year + title bar
-    rCount = interestDetail.count +interestDetail.count/12 +1
-    return rCount;
+    //rCount = self.interestDetail.count + self.interestDetail.count/12 +1;
+    //rCount = self.interestDetail.count;
+    return [self.interestDetail count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    label = (UILabel *)[cell viewWithTag:NAME_TAG];
-    label.text = myObject.name;
-    
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"PaymentDetailCell";
+    MortgagePayment *m;
+    
+    PaymentDetailCell *cell = (PaymentDetailCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
 
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"PaymentDetailCell" owner:self options:nil];
+        cell = [nibArray objectAtIndex:0];
     }
+    
+    AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    m = [ad.prePaymentDetail objectAtIndex:indexPath.row];
+    
+    
+    [cell.tenorLabel setText:[NSString stringWithFormat:@"%d", m.tenor]];
+    [cell.principleLabel setText:[NSString stringWithFormat:@"%0.2f", m.principle]];
+    [cell.interestLabel setText:[NSString stringWithFormat:@"%0.2f", m.interest]];
+    [cell.totalLabel setText:[NSString stringWithFormat:@"%0.2f", m.repayment]];
+    [cell.remainingLabel setText:[NSString stringWithFormat:@"%0.2f", m.total - (m.tenor*m.repayment)]];
+    
 
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
 }
 
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *DetailCellIdentifier = @"DetailCell";
-    
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:DetailCellIdentifier];
-    
-    if (cell == nil) {
-        NSArray *cellObjects = [[NSBundle mainBundle] loadNibNamed:@"DetailCell" owner:self options:nil];
-        cell = (UITableViewCell*) [cellObjects objectAtIndex:0];
-    }
-    
-    //label = (UILabel *)[cell viewWithTag:NAME_TAG];
-    //label.text = myObject.name;
-
-}*/
-
-
-
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    /*CGSize cellSize = [[[_stepsArray objectAtIndex:indexPath.row]content] sizeWithFont:[UIFont boldSystemFontOfSize:18.0f] constrainedToSize:CGSizeMake(528.0f, CGFLOAT_MAX)lineBreakMode:NSLineBreakByWordWrapping];*/
+    return 70;
+}
 
 /*
 // Override to support editing the table view.

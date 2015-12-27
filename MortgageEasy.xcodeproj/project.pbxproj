@@ -19,6 +19,7 @@
 		43485B871C26F2F4006F3069 /* RentalReturnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43485B861C26F2F4006F3069 /* RentalReturnViewController.m */; settings = {ASSET_TAGS = (); }; };
 		43485B901C29741D006F3069 /* PaymentDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43485B8E1C29741D006F3069 /* PaymentDetailCell.m */; settings = {ASSET_TAGS = (); }; };
 		43485B911C29741D006F3069 /* PaymentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43485B8F1C29741D006F3069 /* PaymentDetailCell.xib */; settings = {ASSET_TAGS = (); }; };
+		43485B941C2C34AC006F3069 /* MortgagePayment.m in Sources */ = {isa = PBXBuildFile; fileRef = 43485B931C2C34AC006F3069 /* MortgagePayment.m */; settings = {ASSET_TAGS = (); }; };
 		436995AB1C04D04300FC28BD /* reference.txt in Resources */ = {isa = PBXBuildFile; fileRef = 436995AA1C04D04300FC28BD /* reference.txt */; settings = {ASSET_TAGS = (); }; };
 		436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 436995B31C10AA8D00FC28BD /* PaymentDetailCollection.m */; settings = {ASSET_TAGS = (); }; };
@@ -66,6 +67,8 @@
 		43485B8D1C29741D006F3069 /* PaymentDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentDetailCell.h; sourceTree = "<group>"; };
 		43485B8E1C29741D006F3069 /* PaymentDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentDetailCell.m; sourceTree = "<group>"; };
 		43485B8F1C29741D006F3069 /* PaymentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailCell.xib; sourceTree = "<group>"; };
+		43485B921C2C34AC006F3069 /* MortgagePayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MortgagePayment.h; sourceTree = "<group>"; };
+		43485B931C2C34AC006F3069 /* MortgagePayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MortgagePayment.m; sourceTree = "<group>"; };
 		436995AA1C04D04300FC28BD /* reference.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = reference.txt; sourceTree = "<group>"; };
 		436995AF1C04DC5A00FC28BD /* PaymentDetailTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDetailTableTableViewController.h; path = ../PaymentDetailTableTableViewController.h; sourceTree = "<group>"; };
 		436995B01C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDetailTableTableViewController.m; path = ../PaymentDetailTableTableViewController.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				43485B8D1C29741D006F3069 /* PaymentDetailCell.h */,
 				43485B8E1C29741D006F3069 /* PaymentDetailCell.m */,
 				43485B8F1C29741D006F3069 /* PaymentDetailCell.xib */,
+				43485B921C2C34AC006F3069 /* MortgagePayment.h */,
+				43485B931C2C34AC006F3069 /* MortgagePayment.m */,
 			);
 			path = MortgageEasy;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			files = (
 				431BA2FC1BFCD953008B8D3E /* PurchasingPowerCal.m in Sources */,
 				436995B41C10AA8D00FC28BD /* PaymentDetailCollection.m in Sources */,
+				43485B941C2C34AC006F3069 /* MortgagePayment.m in Sources */,
 				431BA2F61BFCD953008B8D3E /* AppDelegate.m in Sources */,
 				43485B871C26F2F4006F3069 /* RentalReturnViewController.m in Sources */,
 				436995B11C04DC5A00FC28BD /* PaymentDetailTableTableViewController.m in Sources */,

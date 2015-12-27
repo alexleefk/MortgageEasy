@@ -71,7 +71,7 @@
                 <outlet property="tenorLabel" destination="sBf-ur-7ot" id="MYz-Ke-Hgh"/>
                 <outlet property="totalLabel" destination="fAk-M8-18M" id="gjs-Yv-69H"/>
             </connections>
-            <point key="canvasLocation" x="381" y="157.5"/>
+            <point key="canvasLocation" x="370" y="179.5"/>
         </tableViewCell>
     </objects>
 </document>

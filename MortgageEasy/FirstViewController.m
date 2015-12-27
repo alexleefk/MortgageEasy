@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "AppDelegate.h"
 #import "PaymentDetailTableTableViewController.h"
+#import "MortgagePayment.h"
 #include <math.h>
 
 @interface FirstViewController ()
@@ -27,22 +28,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //[self.loanRatioTF setText:[NSString stringWithFormat:@"%d", (int)loanRatioTF.text.intValue]];
-    //[self.loanYearTF setText:[NSString stringWithFormat:@"%d", (int)loanYearTF.text.intValue]];
+    
+    AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    ad.prePaymentDetail = [[NSMutableArray alloc] init];
+    
     [self.loanAmountTF setText:[NSString stringWithFormat:@"%d",
                          (int)loanRatioTF.text.intValue * flatPriceTF.text.intValue /100]];
     
     self.monthlyRePaymentLabel.numberOfLines = 0;
-    //[self.monthlyRePaymentLabel sizeToFit ];
-    
-    //[loanRatioTF setKeyboardType:UIKeyboardTypeDecimalPad];
-    //[loanRateTF setKeyboardType:UIKeyboardTypeDecimalPad];
-    
-    [self Calculate:nil];
-    //[self prepareForSegue:nil];
     
     self.scrollv.contentSize = CGSizeMake(self.view.frame.size.width,
                                           self.monthlyRePaymentLabel.frame.origin.y + self.monthlyRePaymentLabel.frame.size.height +30);
+    [self Calculate:nil];
+    
     
 }
 
@@ -69,6 +67,7 @@
     int i, r;
     double interest, accurdInt, principle, tem_principle;
     NSNumber *intDes;
+    MortgagePayment *m;
     
     NSLog(@"Value of flatPriceTF is %@", flatPriceTF.text);
     NSLog(@"Value of loanAmountTF is %@", loanAmountTF.text);
@@ -83,7 +82,6 @@
     
     
     AppDelegate *ad = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-    
     [ad.prePaymentDetail removeAllObjects];
     
     i = 0;
@@ -95,8 +93,16 @@
         tem_principle = principle - i * payment + accurdInt;
         interest = tem_principle * loanRateTF.text.doubleValue/12/100;
         intDes = [NSNumber numberWithDouble:interest];
-        [ad.prePaymentDetail addObject:intDes];
-        //NSLog(@"interest %d = %f", i, (float)interest);
+
+        m = [[MortgagePayment alloc] init];
+        [m clear];
+        m.tenor = i+1;
+        m.total = principle;
+        m.principle = tem_principle;
+        m.interest = interest;
+        m.repayment = payment;
+        
+        [ad.prePaymentDetail addObject:m];
         
         accurdInt = accurdInt + interest;
         
